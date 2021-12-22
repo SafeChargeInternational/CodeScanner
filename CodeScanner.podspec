@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "CodeScannerFork"
-  s.version               = "1.7.2"
+  s.version               = "1.8.0"
   s.summary               = "CodeScanner is easy to scan a barcode or QR code."
   s.description           = <<-DESC
                              Forked from https://github.com/masashi-sutou/CodeScanner and upgraded to Swift 5
