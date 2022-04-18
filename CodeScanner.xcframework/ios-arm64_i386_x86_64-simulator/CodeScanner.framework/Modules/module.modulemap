@@ -1,0 +1,11 @@
+framework module CodeScanner {
+  umbrella header "CodeScanner.h"
+
+  export *
+  module * { export * }
+}
+
+module CodeScanner.Swift {
+    header "CodeScanner-Swift.h"
+    requires objc
+}

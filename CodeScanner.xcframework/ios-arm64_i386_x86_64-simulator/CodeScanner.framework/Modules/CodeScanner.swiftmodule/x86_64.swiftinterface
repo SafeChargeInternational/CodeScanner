@@ -1,0 +1,28 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CodeScanner
+import AVFoundation
+@_exported import CodeScanner
+import Foundation
+import Swift
+import UIKit
+public struct Code {
+  public static func detectQRCodes(image: UIKit.UIImage, context: CoreImage.CIContext? = nil, accuracy: Swift.String = CIDetectorAccuracyHigh) -> [Swift.String]
+  public static func generateQRCode(text: Swift.String, inputCorrectionLevel level: Swift.String = "M") -> UIKit.UIImage?
+  public static func generate128Barcode(text: Swift.String) -> UIKit.UIImage?
+}
+extension String {
+  public func searchAamazon()
+  public func isJANLowerBarcode() -> Swift.Bool
+  public func convartISBN() -> Swift.String?
+}
+@objc public class CodeScanner : ObjectiveC.NSObject, AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  public init(metadataObjectTypes: [AVFoundation.AVMetadataObject.ObjectType], preview: UIKit.UIView)
+  public class func requestCameraPermission(success: @escaping (Swift.Bool) -> Swift.Void)
+  public func scan(resultOutputs: @escaping ([Swift.String]) -> Swift.Void)
+  public func start()
+  public func stop()
+  @objc public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+  @objc override dynamic public init()
+  @objc deinit
+}

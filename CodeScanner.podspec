@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name                  = "CodeScannerFork"
-  s.version               = "1.8.0"
+  s.name                  = "CodeScanner"
+  s.version               = "1.8.2"
   s.summary               = "CodeScanner is easy to scan a barcode or QR code."
   s.description           = <<-DESC
                              Forked from https://github.com/masashi-sutou/CodeScanner and upgraded to Swift 5
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage              = "https://github.com/SafeChargeInternational/CodeScanner"
   s.license               = { :type => "MIT", :file => "LICENSE" }
   s.source                = { :git => "https://github.com/SafeChargeInternational/CodeScanner.git", :tag => s.version }
-  s.source_files          = "CodeScanner", "CodeScanner/**/*.{swift}"
+  s.vendored_frameworks   = "CodeScanner.xcframework"
   s.requires_arc          = true
   s.platform              = :ios, '10.0'
   s.ios.deployment_target = '10.0'
